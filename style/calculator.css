@@ -1,0 +1,62 @@
+/* making the buttons and text area*/
+body {
+    background-image:linear-gradient(to right, rgba(0, 120, 0, 0.6), rgba(0, 0, 120, 0.7));
+
+}
+div.all{
+    margin:5em auto auto 45em;
+}
+
+input.textview{
+    width: 10.1em;
+    height: 3.2em;
+    background-color: rgba(0,0,0,1);
+    color: white;
+    font-size: 2em;
+    padding: 0;
+
+}
+h2{
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(to right, #CF470F 0%, #CF0F0F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+ table{
+     position: sticky;
+
+}
+#minus{
+    padding-bottom: 9px;
+}
+#equal{
+    background: darkorange;
+    color : white;
+}
+#equal:hover {
+    background-color: orange;
+
+}
+button.button {
+    width: 5em;
+    height: 4em;
+    margin: 0;
+    float: left;
+    border-style: hidden;
+    font-size:  1em;
+    font-weight: bold;
+
+}
+
+#Clear{
+    color: red;
+}
+button:hover{
+    background-color: rgba(220,220,220,0.9)
+
+}
+button:active{
+    border-color:rgba(220,220,220,0.9)
+}
