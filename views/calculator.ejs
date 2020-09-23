@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!--links to jquery,fontawesome and bootstrap cdn-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--specific charset-->
+    <meta charset="utf-8">
+
+    <title>calculator</title>
+    <!--page css styling-->
+    <link rel="stylesheet" type="text/css" href="/static/try.css"/>
+
+
+
+    <link rel="stylesheet" href="/static/calculator.css">
+    <!--js functions-->
+    <script>
+        function myfunction(num) {
+            document.form.textview.value=  document.form.textview.value + num
+        }
+        function equal() {
+            var x = document.form.textview.value;
+            if (x) {
+                document.form.textview.value = eval(x) }
+        }
+        function c(){
+            document.form.textview.value = "" ;
+        }
+        function percent() {
+            var n = document.form.textview.value;
+            if (n) {
+                document.form.textview.value = eval(n) / 100 }
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <!--links and header of page-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" id="home" href="/">home</a>
+        </div>
+    <ul class="nav navbar-nav">
+<li><a id="links" href="/calculator">simple calculator</a></li>
+<li><a id="links" href="/snake-game">snake game</a></li>
+</ul>
+<form id="search" class="navbar-form navbar-left">
+<div class="form-group">
+<input type="text" name="search" class="form-control" placeholder="Google search">
+    </div>
+    <button type="button" class="btn btn-default"><span  class="glyphicon glyphicon-search"></span></button>
+</form>
+
+<form id="join" class="navbar-form navbar-right">
+<a href="/login"><button type="button" class="btn btn-default">login</button></a>
+<a href="/register"><button type="button" class="btn btn-default">register</button></a>
+</form>
+</nav>
+
+<!--calculator making-->
+<h2>Simple Js Calculator</h2>
+<div class="all">
+
+
+    <form name="form">
+        <input class="textview" name="textview" placeholder="0">
+    </form>
+
+    <table>
+        <tr>
+            <th><button class="button" type="button" id="Clear" name="clear" value="" onclick="c()">C</button></th>
+            <th><button class="button"  type="button" name="(" value="(" onclick="myfunction('(')">(</button></th>
+            <th><button  class="button" type="button" name=")" value=")" onclick="myfunction(')')">)</button></th>
+            <th><button  class="button" type="button" name="/" value="/" onclick="myfunction('/')">/</button></th>
+        </tr>
+        <tr>
+            <th><button  class="button" type="button" name="7" value="7"  onclick="myfunction(7)">7</button></th>
+            <th><button  class="button" type="button" name="8" value="8" onclick="myfunction(8)">8</button></th>
+            <th><button  class="button" type="button" name="9" value="9"  onclick="myfunction(9)">9</button></th>
+            <th><button  class="button" type="button" name="*"value="*" onclick="myfunction('*')">x</button></th>
+        </tr>
+        <tr>
+            <th><button  class="button" type="button" name="4" value="4" onclick="myfunction(4)">4</button></th>
+            <th><button  class="button" type="button" name="5" value="5" onclick="myfunction(5)">5</button></th>
+            <th><button  class="button" type="button" name="6"value="6" onclick="myfunction(6)">6</button></th>
+            <th><button  class="button" id="minus" type="button" name="-" value="-" onclick="myfunction('-')">_</button></th>
+        </tr>
+        <tr>
+            <th><button  class="button" type="button" name="1" value="1" onclick="myfunction(1)">1</button></th>
+            <th><button  class="button" type="button" name="2" value="2" onclick="myfunction(2)">2</button></th>
+            <th><button  class="button" type="button" name="3" value="3" onclick="myfunction(3)">3</button></th>
+            <th><button  class="button" type="button" name="+" value="+" onclick="myfunction('+')">+</button></th>
+        </tr>
+        <tr class="last">
+            <th><button  class="button" type="button" name="0" value="0" onclick="myfunction(0)">0</button></th>
+            <th><button  class="button" type="button" name="." value="." onclick="myfunction('.')">.</button></th>
+            <th><button  class="button" type="button" name="%" value="=" onclick="percent()">%</button></th>
+            <th><button  class="button" type="button" id="equal" name="=" value="=" onclick="equal()">=</button></th>
+
+        </tr>
+
+    </table>
+
+</div>
+
+
+</body>
+</html>

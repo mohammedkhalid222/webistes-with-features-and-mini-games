@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <!--links to jquery,fontawesome and bootstrap cdn-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--specific charset-->
+    <meta charset="utf-8">
+
+    <title>snake game</title>
+<script src="/static/snake-game.js"></script>
+    <!--css styling-->
+    <link rel="stylesheet" type="text/css" href="/static/try.css"/>
+
+    <!--CANVAS positioning-->
+<style>
+    body,html { background-color:#A7B4C5 }
+canvas {
+    margin: 0 450px auto;
+
+    border: 10px solid gray;
+    position: fixed;
+
+}
+div.explore_area {
+    position:fixed;
+    width:600px;
+    height:500px;
+    overflow:auto;
+}
+h2{
+    font-weight: bold;
+    font-size: 5em;
+    text-align: center;
+    background: linear-gradient(to right, #77808E 0%, #02060B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+</style>
+</head>
+<body>
+
+<!--links and head of page-->
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand" id="home" href="/">home</a>
+    </div>
+    <ul class="nav navbar-nav">
+<li><a id="links" href="/calculator">simple calculator</a></li>
+<li><a id="links" href="/snake-game">snake game</a></li>
+</ul>
+<form id="search" class="navbar-form navbar-left">
+<div class="form-group">
+<input type="text" name="search" class="form-control" placeholder="Google search">
+    </div>
+    <button type="button" class="btn btn-default"><span  class="glyphicon glyphicon-search"></span></button>
+</form>
+
+<form id="join" class="navbar-form navbar-right">
+<a href="/login"><button type="button" class="btn btn-default">login</button></a>
+<a href="/register"><button type="button" class="btn btn-default">register</button></a>
+</form>
+</nav>
+</div>
+<!--canvas without footer for better viewport-->
+<h2> JQuery Snake Game</h2>
+
+<canvas class="explore_area" id="viewport" width="600" height="500">
+
+    </body>
+    </html>
